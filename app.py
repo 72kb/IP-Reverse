@@ -1,10 +1,12 @@
+import os
 from flask import Flask, request, render_template_string
 from pymongo import MongoClient
 
 app = Flask(__name__)
 
 # MongoDB connection setup
-client = MongoClient('mongodb://db:27017/')
+mongo_uri = os.getenv('MONGO_URI', 'mongodb://104.237.3.15:27017/')
+client = MongoClient(mongo_uri)
 db = client.ip_database
 collection = db.ip_addresses
 
