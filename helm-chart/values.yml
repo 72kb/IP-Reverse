@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: han31thedev/flask-app:latest
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5001
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: flask-app.local #placeholder, since ingress is not enabled yet
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
