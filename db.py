@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
 # MongoDB connection setup
-client = MongoClient('mongodb://104.237.3.15:27017/')
+client = MongoClient('mongodb://104.237.3.15:27017/') #replace with mongo IP
 db = client.ip_database
 collection = db.ip_addresses
 
