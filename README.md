@@ -8,15 +8,13 @@ This project demonstrates deploying a Flask application with a MongoDB backend t
 - [Setup](#setup)
   - [GCP Setup](#gcp-setup)
   - [Local Setup](#local-setup)
-  - [Docker](#docker)
+  <!-- - [Docker](#docker)
   - [Kubernetes](#kubernetes)
   - [Helm](#helm)
-  - [GitHub Actions](#github-actions)
+  - [GitHub Actions](#github-actions) -->
 - [Usage](#usage)
   - [Deploy Locally](#deploy-locally)
   - [Deploy to GKE](#deploy-to-gke)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Prerequisites
 
@@ -64,3 +62,29 @@ Clone the repository to your local machine:
 ```sh
 git clone https://github.com/your-username/flask-app.git
 cd flask-app
+
+
+```
+
+## Usage 
+
+### Deploy Locally
+
+Build and Run Docker Container
+
+```sh
+docker build -t your-dockerhub-username/flask-app:latest .
+docker run -p 5001:5001 your-dockerhub-username/flask-app:latest
+```
+**Access the Flask App**
+- Open your browser and go to http://localhost:5001.
+
+### Deploy to GKE
+
+Push Changes to GitHub
+
+```sh
+git add .
+git commit -m "Deploy to GKE"
+git push origin main
+```
