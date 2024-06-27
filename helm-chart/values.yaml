@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: han31thedev/flask-app:latest
+  repository: han31thedev/flask-app
   tag: latest
   pullPolicy: IfNotPresent
 
